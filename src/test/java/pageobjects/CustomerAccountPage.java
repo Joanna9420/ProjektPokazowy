@@ -89,7 +89,7 @@ public class CustomerAccountPage {
     }
 
     public static void chooseTransactionCategory() {
-        isDisplayed(TRANSACTION_CATEGORY);
+        isClickabled(TRANSACTION_CATEGORY);
         click(TRANSACTION_CATEGORY);
     }
 

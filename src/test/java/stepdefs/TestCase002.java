@@ -12,22 +12,6 @@ import static drivers.DriverFactory.driver;
 import static selectors.CustomerListPageSelectors.*;
 
 public class TestCase002 {
-    @Given("I open a Bank website")
-    public void iOpenABankWebsite() {
-        BankHomePage.openBankWebsite();
-        BankHomePage.assertHomePageUrl();
-    }
-
-    @When("I click a Customer Login category")
-    public void iAClickCustomerLoginCategory() {
-        BankHomePage.chooseCustomerLoginCategory();
-    }
-
-    @And("I click a login button")
-    public void iClickALoginButton() {
-        CustomerListPage.loginCustomer();
-        CustomerAccountPage.assertCustomerLoggedIn();
-    }
 
     @And("I check account balance")
     public void iCheckAccountBalance() {
@@ -54,9 +38,4 @@ public class TestCase002 {
         CustomerAccountPage.checkDepositStatus();
     }
 
-    @Then("I check the account balance after transaction")
-    public void iCheckTheAccountBalanceAfterTransaction() {
-        CustomerAccountPage.checkAccountBalance();
-        driver.quit();
-    }
 }

@@ -21,6 +21,7 @@ public class CommonUtils {
     public static boolean isDisplayed(By locator){
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
     }
+
     public static boolean isClickabled(By locator){
         return getWait().until(ExpectedConditions.elementToBeClickable(locator)).isDisplayed();
     }

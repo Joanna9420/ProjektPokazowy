@@ -13,3 +13,4 @@ Feature: TestCase001
     And I click the button Withdraw
     And I check the transaction status
     Then I check the account balance after the transaction
+    Then I close browser

@@ -12,15 +12,7 @@ import static drivers.DriverFactory.driver;
 import static selectors.CustomerListPageSelectors.*;
 
 public class TestCase003 {
-    @Given("I open the Bank website")
-    public void iOpenTheBankWebsite(){
-        BankHomePage.openBankWebsite();
-        BankHomePage.assertHomePageUrl();
-    }
-    @When("I click the Customer Login category")
-    public void iTheClickCustomerLoginCategory() {
-        BankHomePage.chooseCustomerLoginCategory();
-    }
+
     @And("I click the login button")
     public void iClickTheLoginButton() {
         CustomerListPage.loginCustomer();
@@ -39,19 +31,5 @@ public class TestCase003 {
     public void iEnterRandomAmount() {
         CustomerAccountPage.enterRandomAmount();
     }
-    @And("I click button Withdraw")
-    public void iClickButtonWithdraw() {
-        CustomerAccountPage.clickButtonWithdraw();
-    }
 
-    @And("I check transaction status")
-    public void iCheckTransactionStatus() {
-        CustomerAccountPage.checkTransactionStatus();
-    }
-
-    @Then("I check account balance after the transaction")
-    public void iCheckTheAccountBalanceAfterTheTransaction() {
-        CustomerAccountPage.checkAccountBalance();
-        driver.quit();
-    }
 }

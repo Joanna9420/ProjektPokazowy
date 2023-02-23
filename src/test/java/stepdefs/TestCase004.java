@@ -7,15 +7,10 @@ import io.cucumber.java.en.When;
 import pageobjects.*;
 
 import static drivers.DriverFactory.driver;
+import static helpers.CommonUtils.getWait;
 
 public class TestCase004 {
-    @Given("I open Banks website")
-    public void iOpenBanksWebsite() {
-        BankHomePage.openBankWebsite();
-        BankHomePage.assertHomePageUrl();
-    }
-
-    @When("I click the button Bank Manager Login")
+      @When("I click the button Bank Manager Login")
     public void iClickTheButtonBankManagerLogin() {
         BankHomePage.chooseManagerLoginCategory();
         BankManagerPage.assertBankManagerLogin();
@@ -84,52 +79,22 @@ public class TestCase004 {
         BankHomePage.assertHomePageUrl();
     }
 
-    @And("I click Customer Login category button")
-    public void iClickCustomerLoginCategoryButton() {
-        BankHomePage.chooseCustomerLoginCategory();
-    }
-
     @And("I choose from the list of users X")
     public void iChooseFromTheListOfUsersX() {
         CustomerListPage.chooseNewCustomer();
     }
 
-    @And("I click button login")
-    public void iClickButtonLogin() {
-        CustomerListPage.loginCustomer();
-        CustomerAccountPage.assertCustomerLoggedIn();
-    }
 
     @And("I confirm the visibility of currency Dollar")
     public void iConfirmTheVisibilityOfCurrencyDollar() {
         CustomerAccountPage.checkCurrentCurrency();
     }
 
-    @And("I choose category Deposit")
-    public void iChooseCategoryDeposit() {
-        CustomerAccountPage.chooseDepositCategory();
-    }
 
     @And("I enter a random amount")
     public void iEnterARandomAmount() {
         CustomerAccountPage.enterRandomAmount();
     }
-
-    @And("I click button Deposit")
-    public void iClickButtonDeposit() {
-        CustomerAccountPage.clickButtonDeposit();
-    }
-
-    @And("I check deposit status")
-    public void iCheckDepositStatus() {
-        CustomerAccountPage.checkDepositStatus();
-    }
-
-    @Then("I check account balance after transaction")
-    public void iCheckAccountBalanceAfterTransaction() {
-        CustomerAccountPage.checkAccountBalance();
-    }
-
 
     @And("I choose the category Transactions")
     public void iChooseTheCategoryTransactions() {
@@ -139,7 +104,7 @@ public class TestCase004 {
     @Then("I confirm the visibility of the transaction")
     public void iConfirmTheVisibilityOfTheTransaction() {
         TransactionPage.assertTransationVisibility();
-        driver.quit();
+
     }
 
 

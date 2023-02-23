@@ -7,7 +7,7 @@ public class CustomerAccountPageSelectors {
     public static By ACCOUNT_NUMBER = By.xpath("//strong[contains(@class,'ng-binding')][1]");
     public static By ACCOUNT_BALANCE = By.xpath("//strong[contains(@class,'ng-binding')][2]");
     public static By ACCOUNT_CURRENCY = By.xpath("//strong[contains(@class,'ng-binding')][3]");
-    public static By TRANSACTION_CATEGORY = By.xpath("//button[@ng-class='btnClass1']");
+    public static By TRANSACTION_CATEGORY = By.xpath("//button[contains(text(),'Transactions')]");
     public static By DEPOSIT_CATEGORY = By.xpath("//button[@ng-class='btnClass2']");
     public static By WITHDRAWL_CATEGORY = By.xpath("//button[@ng-class='btnClass3']");
     public static By AMOUNT_INPUT = By.xpath("//input[@type='number']");

@@ -74,8 +74,11 @@ public class TestCase001 {
     @Then("I check the account balance after the transaction")
     public void iCheckTheAccountBalanceAfterTheTransaction() {
         CustomerAccountPage.checkAccountBalance();
-        driver.quit();
     }
 
 
+    @Then("I close browser")
+    public void iCloseBrowser() {
+        driver.quit();
+    }
 }
