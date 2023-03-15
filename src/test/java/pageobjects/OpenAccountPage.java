@@ -2,7 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 
-import static drivers.DriverFactory.driver;
+import static drivers.DriverFactory.*;
 import static helpers.CommonUtils.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static selectors.OpenAccountPageSelectors.*;
@@ -32,7 +32,7 @@ public class OpenAccountPage {
         click(PROCESS_BUTTON);
     }
     public static void confirmOpenedNewAccount(){
-        Alert openNewAccountAlert = driver.switchTo().alert();
+        Alert openNewAccountAlert = getDriver().switchTo().alert();
         System.out.println(openNewAccountAlert.getText());
         openNewAccountAlert.accept();
     }

@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.DecimalFormat;
 import java.time.Duration;
-import static drivers.DriverFactory.driver;
+import static drivers.DriverFactory.*;
 
 public class CommonUtils {
     public static WebDriverWait getWait() {
-        return new WebDriverWait(driver, Duration.ofSeconds(30));
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(30));
     }
     public static void click(By locator) {
         getWait().until(ExpectedConditions.elementToBeClickable(locator)).click();
@@ -37,11 +37,11 @@ public class CommonUtils {
         return RandomStringUtils.randomNumeric(numberAmount);
     }
     public static void assertSelectedCustomer(By locator){
-        String CUSTOMER_NAME = driver.findElement(locator).getText();
+        String CUSTOMER_NAME = getDriver().findElement(locator).getText();
         System.out.println("User selected: " + CUSTOMER_NAME);
     }
     public static String getText(By locator){
-        return driver.findElement(locator).getText();
+        return getDriver().findElement(locator).getText();
 
     }
 

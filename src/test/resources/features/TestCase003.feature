@@ -3,7 +3,7 @@ Feature: TestCase003
   Scenario: Ron Weasley checks his rupee account and withdraws X.
     Given I open Bank website
     When I click Customer Login category
-    And I choose "Ron Weasley"
+    And I choose "Ron Weasly"
     And I click the login button
     And I choose account with number "1009"
     And I confirm currency "Rupee"

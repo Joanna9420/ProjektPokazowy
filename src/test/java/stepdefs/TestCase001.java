@@ -8,8 +8,7 @@ import pageobjects.BankHomePage;
 import pageobjects.CustomerAccountPage;
 import pageobjects.CustomerListPage;
 
-import static drivers.DriverFactory.driver;
-import static selectors.CustomerListPageSelectors.*;
+import static drivers.DriverFactory.getDriver;
 
 public class TestCase001 {
     @Given("I open Bank website")
@@ -79,6 +78,6 @@ public class TestCase001 {
 
     @Then("I close browser")
     public void iCloseBrowser() {
-        driver.quit();
+        getDriver().quit();
     }
 }

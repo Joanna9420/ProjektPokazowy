@@ -1,7 +1,7 @@
 package pageobjects;
 
 import org.openqa.selenium.Alert;
-import static drivers.DriverFactory.driver;
+import static drivers.DriverFactory.*;
 import static helpers.CommonUtils.*;
 import static selectors.AddCustomerPageSelectors.*;
 import static strings.StringsSample.*;
@@ -35,7 +35,7 @@ public class AddCustomerPage {
     }
 
     public static void confirmNewCustomer() {
-        Alert newCustomerAlert = driver.switchTo().alert();
+        Alert newCustomerAlert = getDriver().switchTo().alert();
         System.out.println(newCustomerAlert.getText());
         newCustomerAlert.accept();
     }

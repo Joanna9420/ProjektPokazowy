@@ -1,15 +1,10 @@
 package stepdefs;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import pageobjects.BankHomePage;
 import pageobjects.CustomerAccountPage;
 import pageobjects.CustomerListPage;
 
-import static drivers.DriverFactory.driver;
-import static selectors.CustomerListPageSelectors.*;
+
 
 public class TestCase003 {
 

@@ -1,7 +1,7 @@
 package pageobjects;
 
 
-import static drivers.DriverFactory.driver;
+import static drivers.DriverFactory.*;
 import static helpers.CommonUtils.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static selectors.CustomerAccountPageSelectors.TRANSACTION_CATEGORY;
@@ -10,7 +10,7 @@ import static strings.StringsSample.FIRST_AMOUNT;
 
 public class TransactionPage {
     public static void assertTransationVisibility(){
-        driver.navigate().refresh();
+        getDriver().navigate().refresh();
         click(TRANSACTION_CATEGORY);
         isDisplayed(TRANSACTION_SELECTOR);
         String CHECK_TRANSACION = getText(TRANSACTION_SELECTOR);

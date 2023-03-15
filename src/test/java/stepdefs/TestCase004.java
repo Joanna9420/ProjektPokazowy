@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.*;
 
-import static drivers.DriverFactory.driver;
+
 import static helpers.CommonUtils.getWait;
 
 public class TestCase004 {

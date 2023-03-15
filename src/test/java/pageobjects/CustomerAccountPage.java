@@ -1,7 +1,7 @@
 package pageobjects;
 
 
-import static drivers.DriverFactory.driver;
+import static drivers.DriverFactory.*;
 import static helpers.CommonUtils.*;
 import static org.junit.Assert.assertEquals;
 import static selectors.CustomerAccountPageSelectors.*;
@@ -64,7 +64,7 @@ public class CustomerAccountPage {
 
     public static void checkAccountBalance() {
         isDisplayed(ACCOUNT_BALANCE);
-        String CURRENT_BALANCE = driver.findElement(ACCOUNT_BALANCE).getText();
+        String CURRENT_BALANCE = getDriver().findElement(ACCOUNT_BALANCE).getText();
         System.out.println("Account Balance: " + CURRENT_BALANCE);
     }
 
